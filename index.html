@@ -2,31 +2,25 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <title>Login - Evodentia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Evodentia</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="login-container">
+    <h2>Iniciar sesión en Evodentia</h2>
+    <form onsubmit="login(event)">
+      <input type="text" placeholder="Usuario" required>
+      <input type="password" placeholder="Contraseña" required>
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
 
-  <header>
-    <h1>Evodentia</h1>
-  </header>
-
-  <section class="hero">
-    <h2>Bienvenido al portal dental integral</h2>
-    <p>Formación, empleo y conexión para clínicas, laboratorios y protésicos.</p>
-    <div class="buttons">
-      <a class="btn-primary" href="#">🦷 Ver cursos</a>
-      <a class="btn-secondary" href="#">💼 Unirse ahora</a>
-    </div>
-  </section>
-
-  <section class="icon-grid">
-    <div class="icon-card">🧑‍⚕️<br>Profesionales</div>
-    <div class="icon-card">🏥<br>Clínicas</div>
-    <div class="icon-card">🧪<br>Laboratorios</div>
-    <div class="icon-card">📚<br>Cursos</div>
-  </section>
-
+  <script>
+    function login(event) {
+      event.preventDefault();
+      window.location.href = 'home.html';
+    }
+  </script>
 </body>
 </html>
