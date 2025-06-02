@@ -6,21 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="login-container">
-    <h2>Iniciar sesión en Evodentia</h2>
-    <form onsubmit="login(event)">
-      <input type="text" placeholder="Usuario" required>
-      <input type="password" placeholder="Contraseña" required>
-      <button type="submit">Entrar</button>
-    </form>
+<body class="login-body">
+  <div class="login-overlay">
+    <div class="login-container">
+      <h2>Iniciar sesión</h2>
+      <form onsubmit="login(event)">
+        <input type="email" id="email" placeholder="Correo electrónico" required>
+        <input type="password" id="password" placeholder="Contraseña" required>
+        <button type="submit">Entrar</button>
+      </form>
+      <p id="message"></p>
+    </div>
   </div>
-
-  <script>
-    function login(event) {
-      event.preventDefault();
-      window.location.href = 'home.html';
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

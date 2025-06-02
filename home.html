@@ -2,32 +2,22 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Inicio - Evodentia</title>
+  <title>Evodentia</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <header class="home-header">
+<body class="home-body">
+  <header>
     <h1>Evodentia</h1>
-    <button onclick="logout()">Cerrar sesión</button>
+    <nav>
+      <a href="#" onclick="loadSection('inicio')">Inicio</a>
+      <a href="#" onclick="loadSection('contacta')">Contacta</a>
+      <a href="#" onclick="loadSection('cursos')">Cursos</a>
+      <a href="#" onclick="loadSection('perfil')">Perfil</a>
+      <button onclick="logout()">Cerrar sesión</button>
+    </nav>
   </header>
-  <main>
-    <h2 id="welcome"></h2>
-    <p>Bienvenido al portal. Aquí podrás acceder a cursos y servicios.</p>
-  </main>
-
-  <script>
-    const user = JSON.parse(localStorage.getItem('evodentia_logged_user'));
-    if (!user) {
-      window.location.href = 'login.html';
-    } else {
-      document.getElementById('welcome').textContent = 'Hola, ' + user.name;
-    }
-
-    function logout() {
-      localStorage.removeItem('evodentia_logged_user');
-      window.location.href = 'login.html';
-    }
-  </script>
+  <main id="content"></main>
+  <script src="script.js"></script>
 </body>
 </html>
