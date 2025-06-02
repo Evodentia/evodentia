@@ -6,30 +6,7 @@ body {
   color: #333;
 }
 
-header {
-  background-color: #0099cc;
-  padding: 20px;
-  color: white;
-  text-align: center;
-}
-
-nav {
-  margin-top: 10px;
-}
-
-nav a {
-  margin: 0 15px;
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-}
-
-main {
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.login-container {
+.register-container {
   max-width: 400px;
   margin: 100px auto;
   background: white;
@@ -39,14 +16,14 @@ main {
   text-align: center;
 }
 
-.login-container input {
+.register-container input {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
   font-size: 16px;
 }
 
-.login-container button {
+.register-container button {
   padding: 10px 20px;
   background-color: #0099cc;
   color: white;
@@ -56,6 +33,11 @@ main {
   cursor: pointer;
 }
 
-.login-container button:hover {
+.register-container button:hover {
   background-color: #007caa;
+}
+
+#message {
+  margin-top: 15px;
+  font-weight: bold;
 }
